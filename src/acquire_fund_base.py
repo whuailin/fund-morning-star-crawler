@@ -41,7 +41,7 @@ if __name__ == '__main__':
         sql = "SELECT fund_code, morning_star_code, fund_name FROM " + env_snapshot_table_name + \
             " WHERE fund_code NOT IN (SELECT fund_code FROM fund_morning_base) ORDER BY fund_code LIMIT %s, %s"
         cursor.execute(
-            sql, [page_start, page_limit])    # 执行sql语句
+            sql, [0, page_limit])    # 执行sql语句
         results = cursor.fetchall()    # 获取查询的所有记录
         for record in results:
             each_fund = FundSpider(
