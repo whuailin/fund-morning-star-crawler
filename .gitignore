@@ -6,9 +6,12 @@ code-record/*
 *$py.class
 .vscode/
 *fund_morning_star.csv
+src/temp_update_*
 abnormal
 demo/
-output/
+#outcome/stocks/
+output/json/
+!output/xlsx/
 .env
 
 # C extensions
@@ -16,6 +19,7 @@ output/
 
 # Distribution / packaging
 .Python
+.DS_Store
 build/
 develop-eggs/
 dist/
